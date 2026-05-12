@@ -1,58 +1,51 @@
-# Project Management App
+# Project Management App - React Course Project
 
-A simple React project management application built while following a React course.  
-This project focuses on component-based architecture, state management, reusable UI components, refs, and Tailwind CSS styling.
+This repository contains a React project built while following a course on React fundamentals and practical component design. The project is currently in progress and is being developed step-by-step as new concepts are introduced.
 
----
-
-## Features
-
-- Create new projects
-- View project details
-- Delete projects
-- Add and remove project tasks
-- Form validation with modal feedback
-- Reusable input and button components
-- Sidebar navigation
-- Responsive UI styling with Tailwind CSS
-- State-driven component rendering
-- Ref forwarding and imperative handles
+The goal is to build a simple project management application while learning and applying core React concepts in a structured way.
 
 ---
 
-## Technologies Used
+## Goals
 
-- React
-- JavaScript (ES6+)
-- Tailwind CSS
-- Vite
+- Learn React by building a real-world styled application
+- Practice breaking UI into reusable components
+- Understand state management across multiple components
+- Learn how to handle user input and events
+- Apply Tailwind CSS for styling
+- Improve component structure and reusability over time
 
 ---
 
-## Concepts Practiced
+## Key Concepts
 
-This project was built to practice important React concepts, including:
+- **Components & JSX**: Creating and structuring basic UI components
+- **Props**: Passing data between components
+- **State (`useState`)**: Managing simple UI state
+- **Event Handling**: Responding to user actions (clicks, input, etc.)
+- **Conditional Rendering**: Showing different UI sections based on state
+- **Component Composition**: Splitting UI into smaller pieces
 
-### React Concepts
+---
 
-- Components
-- Props
-- State management
-- Conditional rendering
-- Component splitting and reusability
-- Prop drilling
-- Event handling
+## Current Progress
 
-### Advanced React Features
+- Sidebar component added
+- Basic project structure set up
+- Initial UI layout created
+- Tailwind CSS styling started
+- Component breakdown in progress
 
-- `useRef`
-- `forwardRef`
-- `useImperativeHandle`
+---
 
-### Styling
+## In Progress / Upcoming
 
-- Tailwind CSS utility classes
-- Reusable styled components
+- New Project form component
+- Input handling and validation
+- Project selection system
+- Task management system
+- Modal for error handling
+- State management improvements
 
 ---
 
@@ -61,7 +54,7 @@ This project was built to practice important React concepts, including:
 1. Clone this repo
 
    ```bash
-   git clone https://github.com/LTruter/my-first-react-app.git
+   git clone https://github.com/LTruter/project-management-app.git
 
    ```
 
