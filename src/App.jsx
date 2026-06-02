@@ -16,6 +16,7 @@ function App() {
     projects: [],
   });
 
+  // Creates new project
   function handleCreateNewProject() {
     setProjectsState((prevState) => {
       return {
@@ -25,11 +26,17 @@ function App() {
     });
   }
 
+  // Adds new project to projects array
   function handleAddProject(projectData) {
-    const newProject = { id: Math.random(), ...projectData };
+    const projectId = Math.random();
+    const newProject = { id: projectId, ...projectData };
 
     setProjectsState((prevState) => {
-      return { ...prevState, projects: [...prevState.projects, newProject] };
+      return {
+        ...prevState,
+        projects: [...prevState.projects, newProject],
+        projectAction: PROJECT_ACTIONS.NONE_SELECTED,
+      };
     });
   }
 
@@ -44,7 +51,10 @@ function App() {
 
   return (
     <main className="h-screen my-8 flex gap-8">
-      <ProjectsSidebar onCreateNewProject={handleCreateNewProject} />
+      <ProjectsSidebar
+        onCreateNewProject={handleCreateNewProject}
+        projects={projectsState.projects}
+      />
       {content}
     </main>
   );
