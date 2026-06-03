@@ -26,6 +26,16 @@ function App() {
     });
   }
 
+  // Cancels the creation of a new project
+  function handleCancelAddProject() {
+    setProjectsState((prevState) => {
+      return {
+        ...prevState,
+        projectAction: PROJECT_ACTIONS.NONE_SELECTED,
+      };
+    });
+  }
+
   // Adds new project to projects array
   function handleAddProject(projectData) {
     const projectId = Math.random();
@@ -46,7 +56,10 @@ function App() {
     projectsState.projectAction === PROJECT_ACTIONS.NONE_SELECTED ? (
       <NoProjectSelected onCreateNewProject={handleCreateNewProject} />
     ) : (
-      <NewProject onAddNewPoject={handleAddProject} />
+      <NewProject
+        onAddNewPoject={handleAddProject}
+        onCancelAddProject={handleCancelAddProject}
+      />
     );
 
   return (
