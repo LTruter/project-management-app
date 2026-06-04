@@ -15,7 +15,27 @@ function App() {
     projectAction: PROJECT_ACTIONS.NONE_SELECTED,
     selectedProject: undefined,
     projects: [],
+    tasks: [],
   });
+
+  function handleAddTask(text) {
+    const taskId = Math.random();
+
+    setProjectsState((prevState) => {
+      const newTask = {
+        id: taskId,
+        projectId: prevState.selectedProject.id,
+        text: text,
+      };
+
+      return {
+        ...prevState,
+        tasks: [...prevState.tasks, newTask],
+      };
+    });
+  }
+
+  function handleDeleteTask() {}
 
   // Creates new project
   function handleCreateNewProject() {
@@ -89,8 +109,11 @@ function App() {
   if (projectsState.projectAction === PROJECT_ACTIONS.SELECTED) {
     content = (
       <SelectedProject
+        tasks={projectsState.tasks}
         project={projectsState.selectedProject}
         onDeleteProject={handleDeleteProject}
+        onAddTask={handleAddTask}
+        onDeleteTask={handleDeleteTask}
       />
     );
   } else if (projectsState.projectAction === PROJECT_ACTIONS.CREATED) {
