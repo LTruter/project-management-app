@@ -32,7 +32,12 @@ function SelectedProject({
           {project.description}
         </p>
       </header>
-      <Tasks tasks={tasks} onAddTask={onAddTask} onDeleteTask={onDeleteTask} />
+      <Tasks
+        tasks={tasks}
+        onAddTask={onAddTask}
+        onDeleteTask={onDeleteTask}
+        project={project}
+      />
     </div>
   );
 }
